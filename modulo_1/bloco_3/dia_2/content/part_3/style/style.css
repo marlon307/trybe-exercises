@@ -1,0 +1,31 @@
+body{
+    font-size: 16px;
+    text-decoration: none;
+    line-height: 50px;
+    text-align: center;
+}
+h1{
+    font-size: 65px;
+    color: orange;
+    font-family: sans-serif;
+    font-style: oblique;
+}
+li{
+    background: papayawhip;
+}
+.color{
+    background: powderblue;
+}
+p{
+    font-weight: 600;
+    font-size: 48px;
+}
+.yellow{
+    background: yellow;
+}
+.red{
+    background: red;
+}
+.brown{
+    background: brown;
+}
