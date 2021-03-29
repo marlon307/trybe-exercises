@@ -1,0 +1,29 @@
+div:hover{
+    border: .5px solid #333;
+}
+
+div:nth-child(2n+1){
+    font-style: italic;
+}
+
+.cp{
+    background: tomato;
+    text-decoration: underline;
+}
+.cs{
+    background: violet;
+    font-variant: small-caps;
+}
+.cc{
+    background: yellowgreen;
+    font-weight: normal;
+    height: 70px;
+}
+.ce{
+    background: tan;
+    color: springgreen;
+}
+.ccl{
+    font-weight: sans-serif;
+    background: teal;
+}
