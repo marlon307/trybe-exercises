@@ -5,14 +5,23 @@ const lineHeight = document.getElementById('lineHeight');
 const fontFamily = document.getElementById('fontFamily');
 const fontSize = document.getElementById('fontSize');
 
-console.log(localStorage.length);
 
 if (localStorage.length === 0) {
-    localStorage.setItem('bg', '#fff');
-    localStorage.setItem('fc', '#333');
-    localStorage.setItem('lh', '10');
+    localStorage.setItem('bg', '#ffffff');
+    getBgc.value = '#ffffff';
+    getBody.style.background = '#ffffff';
+    localStorage.setItem('fc', '#333333');
+    fontColor.value = '#333333';
+    getBody.style.color = '#333333';
+    localStorage.setItem('lh', '1.2');
+    lineHeight.value = '1.2';
+    getBody.style.lineHeight = '1.2';
     localStorage.setItem('ff', 'Arial');
+    getBody.style.fontFamily = 'Arial';
+    fontFamily.value = 'Arial';
     localStorage.setItem('fs', '15');
+    getBody.style.fontSize = '15px';
+    fontSize.value = '15';
 } else {
     let bGc = localStorage.getItem('bg');
     let cl = localStorage.getItem('fc');
@@ -29,15 +38,12 @@ if (localStorage.length === 0) {
     lineHeight.value = lh;
     getBody.style.lineHeight = lh;
 
-
     getBody.style.fontFamily = ff;
     fontFamily.value = ff;
 
     getBody.style.fontSize = fs + 'px';
     fontSize.value = fs;
 }
-
-console.log(getBgc.id);
 
 function getPropy(event) {
     switch (event.target.id) {
@@ -74,5 +80,3 @@ fontColor.addEventListener('mouseleave', getPropy);
 lineHeight.addEventListener('keyup', getPropy);
 fontSize.addEventListener('keyup', getPropy);
 fontFamily.addEventListener('keyup', getPropy);
-
-
