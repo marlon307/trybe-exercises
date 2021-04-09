@@ -19,3 +19,8 @@
     width: 60vh;
     margin: 50px auto;
 }
+
+.block {
+    display: inline-block;
+    height: 50px;
+}
