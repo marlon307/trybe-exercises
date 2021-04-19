@@ -1,0 +1,26 @@
+*{
+    text-align: center;
+}
+
+.light {
+    background: #eeeeee;
+    color: #333;
+    text-align: center;
+}
+
+.dark {
+    background: #474747;
+    color: #d8d8d8;
+    text-align: center;
+}
+
+
+.text {
+    width: 60vh;
+    margin: 50px auto;
+}
+
+.block {
+    display: inline-block;
+    height: 50px;
+}
