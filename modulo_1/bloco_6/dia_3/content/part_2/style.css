@@ -1,0 +1,76 @@
+.box-1 {
+  color: #9069EF;
+  background-color: #f3f3f3;
+  border: 2px solid #232525;
+  font-size: 50px;
+  height: 60px;
+  margin: 10px 5px;
+  text-align: center;
+  width: 20%;
+}
+
+.box-container1 {
+  background-color: #0fa36b;
+  display: flex;
+  justify-content: space-around;
+  /* ADICIONE AQUI SEUS TESTES */
+}
+
+.box-one {
+  color: #9069EF;
+  background-color: #f3f3f3;
+  border: 2px solid #232525;
+  font-size: 70px;
+  height: 80px;
+  margin: 10px 5px;
+  text-align: center;
+  width: 50px;
+}
+
+.box-two {
+  color: #9069EF;
+  background-color: #f3f3f3;
+  border: 2px solid #232525;
+  font-size: 50px;
+  height: 60px;
+  margin: 10px 5px;
+  text-align: center;
+  width: 50px;
+}
+
+.box-three {
+  color: #9069EF;
+  background-color: #f3f3f3;
+  border: 2px solid #232525;
+  font-size: 30px;
+  margin: 10px 5px;
+  height: 50px;
+  text-align: center;
+  width: 50px;
+}
+
+.box-container2 {
+  background-color: #0fa36b;
+  display: flex;
+  /* ADICIONE AQUI SEUS TESTES */
+  align-items: flex-end;
+}
+
+/*Part 3*/
+.box-container3 {
+  background-color: #0fa36b;
+  display: flex;
+  /* ADICIONE AQUI SEUS TESTES */
+  align-items: center;
+}
+
+.box {
+  color: #9069EF;
+  background-color: #f3f3f3;
+  border: 2px solid #232525;
+  font-size: 50px;
+  height: 60px;
+  margin: 10px 5px;
+  text-align: center;
+  width: 30%;
+}
