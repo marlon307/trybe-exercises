@@ -57,7 +57,7 @@ getButton.addEventListener('click', (event) => {
       getResume.appendChild(creatElem);
     }
   } else {
-    // alert('Preencha os campos obrigatórios com ( * )');
+    alert('Preencha os campos obrigatórios com ( * )');
   }
 });
 
