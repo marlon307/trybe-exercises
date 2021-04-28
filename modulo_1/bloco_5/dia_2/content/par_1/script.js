@@ -2,7 +2,7 @@ var elementOvc = document.getElementById('elementoOndeVoceEsta');
 elementOvc.parentNode.style.color = '#3535';
 elementOvc.firstElementChild.innerText = 'Texto';
 
-var elementpai = document.getElementById('pai'); 
+var elementpai = document.getElementById('pai');
 
 console.log(elementpai.firstElementChild);
 
