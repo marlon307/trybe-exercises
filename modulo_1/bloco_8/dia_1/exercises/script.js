@@ -19,10 +19,6 @@ const rand = (number) => {
   return Math.round(Math.random(number) * number);
 }
 
-const sorteio = (number, callback) => {
-  let result = false;
-  if (number === callback(5)) result = true;
-  return result ? 'Parabéns você ganhou' : 'Tente novamente';
-}
+const sorteio = (number, callback) => number === callback ? 'Parabéns você ganhou' : 'Tente novamente';
 
-console.log(sorteio(3, rand));
+console.log(sorteio(3, rand(5)));
