@@ -30,8 +30,8 @@ const randWarrior = () => Math.round(Math.random() * (warrior['strength'] - warr
 //3
 const randMage = () => {
   const calc = Math.round(Math.random() * (mage['intelligence'] * 2 - mage['intelligence']));
-  const calcMan = mage['mana'] > 15 ? mage['mana'] - 15 : 'Não possui mana suficiente';
-  return {
+  const calcMan = mage['mana'] > 15 ? mage['mana'] -= 15 : 'Não possui mana suficiente';
+  return mage.round = {
     gm: calc,
     mn: calcMan,
   }
@@ -52,7 +52,7 @@ const turnoW = () => {
 }
 
 const turnoM = () => {
-  const rand = randMage();
+  const rand = randMage().gm;
   dragon.healthPoints -= rand;
   mage.damage === undefined ? mage.damage = rand : mage.damage += rand;
 }
