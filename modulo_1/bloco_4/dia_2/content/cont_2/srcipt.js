@@ -11,10 +11,10 @@ let menuService = ['Home', 'Serviços', 'Portfólio', 'Links'];
 
 let indexOfPortfolio;
 
-for (var i = 0; i < menuService.length; i++){
-    if (menuService[i] == 'Portfólio') {
-        indexOfPortfolio = i;
-    }
+for (var i = 0; i < menuService.length; i++) {
+  if (menuService[i] == 'Portfólio') {
+    indexOfPortfolio = i;
+  }
 }
 
 console.log(indexOfPortfolio);

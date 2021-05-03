@@ -14,7 +14,6 @@ const newEmployees = (block) => {
 //console.log(creatUser('marlon'));
 console.log(newEmployees(creatUser));
 
-
 const rand = (number) => {
   return Math.round(Math.random(number) * number);
 }

@@ -13,5 +13,4 @@ function myRemoveWithoutCopy(arr, item) {
 
 // implemente seus testes aqui
 let arr = [1, 2, 3, 4];
-
 console.log(myRemoveWithoutCopy(arr, 4));

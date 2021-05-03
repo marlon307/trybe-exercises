@@ -1,36 +1,36 @@
-body{
-    text-align: center;
+body {
+  text-align: center;
 }
-img{
-    width: 150px;
+img {
+  width: 150px;
 }
-.container{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-.block, 
-.xat{
-    position: relative;
-}
-
-.xat{
-    position: absolute;
-    left: -95%;
+.block,
+.xat {
+  position: relative;
 }
 
-.word{
-    position: absolute;
-    top: 10%;
+.xat {
+  position: absolute;
+  left: -95%;
 }
 
-.goomba{
-    position: absolute;
-    top: 30vh;
-    left: 20%;
+.word {
+  position: absolute;
+  top: 10%;
 }
 
-.bgoomb{
-    position: absolute;
-    left: 80%;
+.goomba {
+  position: absolute;
+  top: 30vh;
+  left: 20%;
+}
+
+.bgoomb {
+  position: absolute;
+  left: 80%;
 }
