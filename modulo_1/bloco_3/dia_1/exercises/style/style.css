@@ -1,10 +1,10 @@
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 98vh;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 98vh;
 }
 
-a{
-    font-size: 50px;
+a {
+  font-size: 50px;
 }

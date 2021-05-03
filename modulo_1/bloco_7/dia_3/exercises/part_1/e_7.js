@@ -14,6 +14,5 @@ const expected = 53;
 const output = sumAllNumbers(numbers);
 
 console.log(output);
-
 assert.strictEqual(typeof sumAllNumbers, 'function');
 assert.strictEqual(output, expected);

@@ -1,18 +1,18 @@
-*{
-    list-style: none;
+* {
+  list-style: none;
 }
 
 h1,
-p{
-    text-align: center;
+p {
+  text-align: center;
 }
 
-li{
-    width: 200px;
+li {
+  width: 200px;
 }
-li:hover{
-    background: cyan;
+li:hover {
+  background: cyan;
 }
-li:active{
-    color: crimson;
+li:active {
+  color: crimson;
 }

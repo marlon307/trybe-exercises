@@ -14,54 +14,56 @@
 
 */
 
-ol li{
-    background: yellow;
+ol li {
+  background: yellow;
 }
-ol li:nth-child(2n+1){
-    text-transform: uppercase;
+ol li:nth-child(2n + 1) {
+  text-transform: uppercase;
 }
-ol li:nth-child(2n+2){
-    color: green;
+ol li:nth-child(2n + 2) {
+  color: green;
 }
-h1,h2,h3{
-    color: red;
-}
-
-h1 em{
-    font-size: 50px;
-    border: 1px solid #000;
+h1,
+h2,
+h3 {
+  color: red;
 }
 
-li{
-    font-size: 20px;
+h1 em {
+  font-size: 50px;
+  border: 1px solid #000;
 }
 
-li em{
-    font-weight: bold;
+li {
+  font-size: 20px;
 }
 
-.dev li:nth-child(-n+3){
-    color: blue;
-}
-.tag{
-    background: pink;
-}
-.allies li:hover{
-    font-weight: bold;
+li em {
+  font-weight: bold;
 }
 
-.sov:hover{
-    color: orange;
+.dev li:nth-child(-n + 3) {
+  color: blue;
 }
-.w3:hover{
-    color: green;
+.tag {
+  background: pink;
 }
-.mdn:hover{
-    color: black;
+.allies li:hover {
+  font-weight: bold;
 }
-.dev:hover{
-    color: rgb(216, 212, 0);
+
+.sov:hover {
+  color: orange;
 }
-.Trybe:hover{
-    color: green;
+.w3:hover {
+  color: green;
+}
+.mdn:hover {
+  color: black;
+}
+.dev:hover {
+  color: rgb(216, 212, 0);
+}
+.Trybe:hover {
+  color: green;
 }

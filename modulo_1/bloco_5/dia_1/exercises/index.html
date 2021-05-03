@@ -1,80 +1,88 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Exercício 5.1</title>
 
-    <style>
-      div {
-        border-color: black;
-        border-style: solid;
-      }
-      .title {
-        text-align: center;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Exercício 5.1</title>
 
-      .main-content {
-        background-color: yellow;
-      }
+  <style>
+    div {
+      border-color: black;
+      border-style: solid;
+    }
 
-      .main-content .center-content {
-        background-color: red;
-        width: 50%;
-        margin: 0 auto;
-      }
+    .title {
+      text-align: center;
+    }
 
-      .main-content .center-content p {
-        font-style: italic;
-      }
-    </style>
-  </head>
-  <body>
-    <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
-    <div class="main-content">
-      <div class="center-content">
-        <p>Texto padrão do nosso site</p>
-        <p id="paragraph">-----</p>
-        <p>Trybe</p>
-      </div>
+    .main-content {
+      background-color: yellow;
+    }
+
+    .main-content .center-content {
+      background-color: red;
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    .main-content .center-content p {
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
+  <div class="main-content">
+    <div class="center-content">
+      <p>Texto padrão do nosso site</p>
+      <p id="paragraph">-----</p>
+      <p>Trybe</p>
     </div>
-    <script>
-        function descprev(text) {
-            var element = document.getElementById('paragraph')
-            element.innerText = text;
-        }
-        function updatecolor(color) {
-            var element = document.getElementsByClassName('main-content')[0];
-            element.style.backgroundColor = color;
-        }
-        function updateMaincolor(color) {
-            var element = document.getElementsByClassName('center-content')[0];
-            element.style.backgroundColor = color;
-        }
-        function correctH1(text) {
-            var element = document.getElementsByClassName('title')[0];
-            element.innerText = text;
-        }
-        function formatParagraph() {
-            var element = document.getElementsByTagName('p');
-            for(let index = 0; index < element.length; index += 1) {
-                element[index].style.textTransform = 'uppercase';
-            } 
-        }
+  </div>
+  <script>
+    function descprev(text) {
+      var element = document.getElementById('paragraph')
+      element.innerText = text;
+    }
 
-        function logPrint() {
-            var element = document.getElementsByTagName('p');
-            for (let index = 0; index < element.length; index += 1) {
-                console.log(element[index].innerText);
-            }
-        }
+    function updatecolor(color) {
+      var element = document.getElementsByClassName('main-content')[0];
+      element.style.backgroundColor = color;
+    }
 
-        logPrint();
-        formatParagraph();
-        correctH1('Exercício 5.1 - JavaScript');
-        updateMaincolor('#fff');
-        updatecolor('rgb(76,164,109)');
-        descprev('Não gaste tempo pensando no texto e sim realizando o exercício');
-    </script>
-  </body>
+    function updateMaincolor(color) {
+      var element = document.getElementsByClassName('center-content')[0];
+      element.style.backgroundColor = color;
+    }
+
+    function correctH1(text) {
+      var element = document.getElementsByClassName('title')[0];
+      element.innerText = text;
+    }
+
+    function formatParagraph() {
+      var element = document.getElementsByTagName('p');
+      for (let index = 0; index < element.length; index += 1) {
+        element[index].style.textTransform = 'uppercase';
+      }
+    }
+
+    function logPrint() {
+      var element = document.getElementsByTagName('p');
+      for (let index = 0; index < element.length; index += 1) {
+        console.log(element[index].innerText);
+      }
+    }
+
+    logPrint();
+    formatParagraph();
+    correctH1('Exercício 5.1 - JavaScript');
+    updateMaincolor('#fff');
+    updatecolor('rgb(76,164,109)');
+    descprev('Não gaste tempo pensando no texto e sim realizando o exercício');
+  </script>
+</body>
+
 </html>

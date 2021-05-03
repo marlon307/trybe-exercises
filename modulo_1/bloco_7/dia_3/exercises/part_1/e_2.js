@@ -13,7 +13,5 @@ function myRemove(arr, item) {
 // implemente seus testes aqui
 
 const arr = [1, 2, 3, 4];
-
 assert.deepStrictEqual(myRemove(arr, 3), [1, 2, 4], 'Array incorreta');
-
 assert.deepStrictEqual(myRemove(arr, 3), [1, 2, 3, 4], 'Array incorreta');

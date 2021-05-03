@@ -11,7 +11,6 @@ a cor do mesmo;
 
 Segue abaixo um exemplo do uso de event.target:
 */
-
 function resetText(event) {
   // O Event é passado como um parâmetro para a função.
   event.target.innerText = 'Opção reiniciada';
@@ -19,16 +18,13 @@ function resetText(event) {
   // que retorna o objeto que disparou o evento.
   // document.getElementById(event.target.id).classList.remove('tech');
   const tech = document.querySelectorAll('.tech');
-  
   tech.forEach((claindx) => {
     claindx.classList.remove('tech');
   });
-
   document.getElementById(event.target.id).classList.add('tech');
-
 }
 
-function updateText(event){
+function updateText(event) {
   textDiv = document.querySelector('.tech');
   textDiv.innerText = event.target.value;
 }
