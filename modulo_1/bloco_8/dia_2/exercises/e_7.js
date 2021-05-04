@@ -69,11 +69,9 @@ function authorUnique(array) {
   let primary = 0;
   let result = false;
   array.forEach(element => {
-    if (primary !== element.author.birthYear) {
-      primary = element.author.birthYear;
-    } else {
+    primary !== element.author.birthYear ?
+      primary = element.author.birthYear :
       result = true;
-    }
   });
   return result;
 }
