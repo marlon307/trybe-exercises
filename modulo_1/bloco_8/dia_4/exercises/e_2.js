@@ -62,13 +62,13 @@ const books = [{
   },
 ];
 
-//Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais. Dica: cada inicial termina com um ponto.
-const expectedResult = 'O Senhor dos Anéis';
-
-function authorWith3DotsOnName() {
+//Crie uma string com os nomes de todas as pessoas autoras.
+function allNames() {
   // escreva seu código aqui
-  return books.filter((value) => value.author.name.split('.').length === 4)[0].name;
+  const result = books.reduce((ac, item) => ac + `${item.author.name}, `, 'Nomes: ');
+  let format = `${result.slice(0, -2)}.`;
+  return format;
 }
 
-console.log(authorWith3DotsOnName());
-assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult);
+console.log(allNames());
+assert.deepStrictEqual(allNames(), 'Nomes: George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.');

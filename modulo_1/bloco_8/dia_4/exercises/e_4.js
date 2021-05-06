@@ -33,7 +33,6 @@ const books = [{
   {
     id: 4,
     name: 'Duna',
-    genre: 'Ficção Científica',
     author: {
       name: 'Frank Herbert',
       birthYear: 1920,
@@ -62,13 +61,22 @@ const books = [{
   },
 ];
 
-//Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais. Dica: cada inicial termina com um ponto.
-const expectedResult = 'O Senhor dos Anéis';
+//Encontre o livro com o maior nome.
+const expectedResult = {
+  author: {
+    birthYear: 1948,
+    name: 'George R. R. Martin',
+  },
+  genre: 'Fantasia',
+  id: 1,
+  name: 'As Crônicas de Gelo e Fogo',
+  releaseYear: 1991,
+};
 
-function authorWith3DotsOnName() {
+function longestNamedBook() {
   // escreva seu código aqui
-  return books.filter((value) => value.author.name.split('.').length === 4)[0].name;
+  return books.map((elem) => elem).sort((e1, e2) => e2.name.length - e1.name.length)[0];
 }
 
-console.log(authorWith3DotsOnName());
-assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult);
+console.log(longestNamedBook());
+assert.deepStrictEqual(longestNamedBook(), expectedResult);
