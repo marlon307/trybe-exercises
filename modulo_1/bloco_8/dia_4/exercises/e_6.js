@@ -30,5 +30,6 @@ const expected = [{
     average: 8.8
   },
 ];
+
 console.log(studentAverage());
 assert.deepStrictEqual(studentAverage(), expected);
