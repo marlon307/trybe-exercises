@@ -9,7 +9,7 @@ const findTheNeedle = (array, string) => {
     }
   }
   return Number(result);
-}
+};
 
 let words = ['house', 'train', 'slide', 'needle', 'book'];
 let expected = 3;

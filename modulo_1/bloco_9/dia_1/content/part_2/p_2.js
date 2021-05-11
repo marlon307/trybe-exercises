@@ -37,7 +37,6 @@
 //     Gasto: R$459,00
 //     Saldo: R$541,00
 
-
 // const assert = require('assert');
 
 // const userFullName = ({
@@ -64,28 +63,20 @@
 // assert.strictEqual(getUser(userFullName), "Hello! My name is Ivan Ivanovich"); // complete a chamada da função de getUser
 // assert.strictEqual(getUser(userNationality), "Ivan is Russian"); // complete a chamada da função de getUser
 
-
-const userFullName = ({
-  firstName,
-  lastName
-}) => `Hello! My name is ${firstName} ${lastName}`;
-const userNationality = ({
-  firstName,
-  nationality
-}) => `${firstName} is ${nationality}`;
+const userFullName = ({ firstName, lastName }) => `Hello! My name is ${firstName} ${lastName}`;
+const userNationality = ({ firstName, nationality }) => `${firstName} is ${nationality}`;
 
 const delay = (maxMilliseconds = 5000) => Math.floor(Math.random() * maxMilliseconds);
 
 const getUser = (paramCallback) => {
   setTimeout(() => {
     const user = {
-      firstName: "Ivan",
-      lastName: "Ivanovich",
-      nationality: "Russian",
+      firstName: 'Ivan',
+      lastName: 'Ivanovich',
+      nationality: 'Russian',
     };
     console.log(paramCallback(user));
   }, delay());
-
 };
 
 getUser(userFullName); // deve imprimir "Hello! My name is Ivan Ivanovich" depois de um certo tempo

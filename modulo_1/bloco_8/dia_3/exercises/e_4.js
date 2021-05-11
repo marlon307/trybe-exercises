@@ -68,7 +68,7 @@ const expectedResult = [{
     genre: 'Terror',
     author: {
       name: 'H. P. Lovecraft',
-      birthYear: 1890
+      birthYear: 1890,
     },
     releaseYear: 1928,
   },
@@ -78,7 +78,7 @@ const expectedResult = [{
     genre: 'Ficção Científica',
     author: {
       name: 'Isaac Asimov',
-      birthYear: 1920
+      birthYear: 1920,
     },
     releaseYear: 1951,
   },
@@ -88,7 +88,7 @@ const expectedResult = [{
     genre: 'Fantasia',
     author: {
       name: 'J. R. R. Tolkien',
-      birthYear: 1892
+      birthYear: 1892,
     },
     releaseYear: 1954,
   },
@@ -98,7 +98,9 @@ const expectedResult = [{
 function oldBooks() {
   // escreva seu código aqui
   let date = new Date().getFullYear();
-  return books.filter((item) => date - item.releaseYear > 59).sort((a, b) => b.id - a.id);
+  return books
+    .filter((item) => date - item.releaseYear > 59)
+    .sort((a, b) => b.id - a.id);
 }
 
 console.log(oldBooks());
