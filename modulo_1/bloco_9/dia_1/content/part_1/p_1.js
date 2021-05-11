@@ -10,7 +10,6 @@
 
 // assert.deepStrictEqual(numbers, [1, 2, 3]);
 
-
 // const assert = require('assert');
 
 // const pushNumber = (list, number) => list.push(number);
