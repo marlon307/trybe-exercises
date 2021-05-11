@@ -28,8 +28,11 @@ const people = [{
 ];
 
 // escreva filterPeople abaixo
-const filterPeople = (object) => {
-  return object.filter((predicate) => predicate.bornIn < 2000 && predicate.bornIn > 1899);
+const filterPeople = (array) => {
+  return array.filter(({
+    bornIn,
+    nationality
+  }) => bornIn > 1900 && bornIn < 2000 && nationality === 'Australian');
 }
 
 const filteredPeople = filterPeople(people);
