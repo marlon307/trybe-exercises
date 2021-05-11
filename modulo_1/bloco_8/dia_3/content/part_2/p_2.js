@@ -18,21 +18,24 @@
 //   fullNames.push(`${persons[index].firstName} ${persons[index].lastName}`);
 // }
 
-const persons = [{
+const persons = [
+  {
     firstName: 'Maria',
-    lastName: 'Ferreira'
+    lastName: 'Ferreira',
   },
   {
     firstName: 'João',
-    lastName: 'Silva'
+    lastName: 'Silva',
   },
   {
     firstName: 'Antonio',
-    lastName: 'Cabral'
+    lastName: 'Cabral',
   },
 ];
 
-const fullNames = persons.map((person) => `${person.firstName} ${person.lastName}`);
+const fullNames = persons.map(
+  (person) => `${person.firstName} ${person.lastName}`
+);
 
 console.log(fullNames); // [ 'Maria Ferreira', 'João Silva', 'Antonio Cabral' ]
 
@@ -52,19 +55,21 @@ console.log(fullNames); // [ 'Maria Ferreira', 'João Silva', 'Antonio Cabral' ]
 
 const numbers = [1, 2, 3, 4, -5];
 
-const negativeNumbers = numbers.map((number) => ((number > 0) ? number * (-1) : number));
+const negativeNumbers = numbers.map((number) =>
+  number > 0 ? number * -1 : number
+);
 
 console.log(negativeNumbers); // [ -1, -2, -3, -4, -5 ]
 console.log(numbers); // [ 1, 2, 3, 4, -5 ]
-
 
 const products = ['Arroz', 'Feijao', 'Alface', 'Tomate'];
 
 const prices = [2.99, 3.99, 1.5, 2];
 
-const updateProducts = (listProducts, listPrices) => listProducts.map((product, index) => ({
-  [product]: listPrices[index]
-}));
+const updateProducts = (listProducts, listPrices) =>
+  listProducts.map((product, index) => ({
+    [product]: listPrices[index],
+  }));
 
 const listProducts = updateProducts(products, prices);
 console.log(listProducts);
@@ -86,26 +91,28 @@ numeros.forEach((numero) => {
 });
 console.log(paresMenoresQueCinco); // Retorno: [2, 4]
 
-const estudantes = [{
+const estudantes = [
+  {
     nome: 'Jorge',
     sobrenome: 'Silva',
     idade: 14,
     turno: 'Manhã',
-    materias: [{
+    materias: [
+      {
         name: 'Matemática',
-        nota: 67
+        nota: 67,
       },
       {
         name: 'Português',
-        nota: 79
+        nota: 79,
       },
       {
         name: 'Química',
-        nota: 70
+        nota: 70,
       },
       {
         name: 'Biologia',
-        nota: 65
+        nota: 65,
       },
     ],
   },
@@ -114,21 +121,22 @@ const estudantes = [{
     sobrenome: 'Ferreira',
     idade: 15,
     turno: 'Tarde',
-    materias: [{
+    materias: [
+      {
         name: 'Matemática',
-        nota: '59'
+        nota: '59',
       },
       {
         name: 'Português',
-        nota: '80'
+        nota: '80',
       },
       {
         name: 'Química',
-        nota: '78'
+        nota: '78',
       },
       {
         name: 'Biologia',
-        nota: '92'
+        nota: '92',
       },
     ],
   },
@@ -137,21 +145,22 @@ const estudantes = [{
     sobrenome: 'Santos',
     idade: 15,
     turno: 'Manhã',
-    materias: [{
+    materias: [
+      {
         name: 'Matemática',
-        nota: '76'
+        nota: '76',
       },
       {
         name: 'Português',
-        nota: '90'
+        nota: '90',
       },
       {
         name: 'Química',
-        nota: '70'
+        nota: '70',
       },
       {
         name: 'Biologia',
-        nota: '80'
+        nota: '80',
       },
     ],
   },
@@ -160,21 +169,22 @@ const estudantes = [{
     sobrenome: 'Silveira',
     idade: 14,
     turno: 'Manhã',
-    materias: [{
+    materias: [
+      {
         name: 'Matemática',
-        nota: '91'
+        nota: '91',
       },
       {
         name: 'Português',
-        nota: '85'
+        nota: '85',
       },
       {
         name: 'Química',
-        nota: '92'
+        nota: '92',
       },
       {
         name: 'Biologia',
-        nota: '90'
+        nota: '90',
       },
     ],
   },
@@ -183,21 +193,22 @@ const estudantes = [{
     sobrenome: 'Castro',
     idade: 14,
     turno: 'Manhã',
-    materias: [{
+    materias: [
+      {
         name: 'Matemática',
-        nota: '70'
+        nota: '70',
       },
       {
         name: 'Português',
-        nota: '70'
+        nota: '70',
       },
       {
         name: 'Química',
-        nota: '60'
+        nota: '60',
       },
       {
         name: 'Biologia',
-        nota: '50'
+        nota: '50',
       },
     ],
   },
@@ -206,21 +217,22 @@ const estudantes = [{
     sobrenome: 'Martins',
     idade: 14,
     turno: 'Manhã',
-    materias: [{
+    materias: [
+      {
         name: 'Matemática',
-        nota: '80'
+        nota: '80',
       },
       {
         name: 'Português',
-        nota: '82'
+        nota: '82',
       },
       {
         name: 'Química',
-        nota: '79'
+        nota: '79',
       },
       {
         name: 'Biologia',
-        nota: '75'
+        nota: '75',
       },
     ],
   },
@@ -234,7 +246,9 @@ const estudantes = [{
 //   }
 // }
 
-const allNameStudents = estudantes.filter((estudante) => (estudante.turno === 'Manhã')).map((estudante) => `${estudante.nome} ${estudante.sobrenome}`);
+const allNameStudents = estudantes
+  .filter((estudante) => estudante.turno === 'Manhã')
+  .map((estudante) => `${estudante.nome} ${estudante.sobrenome}`);
 
 console.log(allNameStudents);
 
@@ -263,9 +277,10 @@ console.log(allNameStudents);
 
 const reportStatus = (name, students) => {
   const studentInfo = students.find((student) => student.nome === name);
-  return studentInfo.materias.map((materia) => (
-    `${materia.name} ${(materia.nota >= 60) ? 'Aprovado' : 'Reprovado'}`
-  ));
+  return studentInfo.materias.map(
+    (materia) =>
+      `${materia.name} ${materia.nota >= 60 ? 'Aprovado' : 'Reprovado'}`
+  );
 };
 
 console.log(reportStatus('Natalia', estudantes));
