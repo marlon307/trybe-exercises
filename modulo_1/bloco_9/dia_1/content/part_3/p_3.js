@@ -1,5 +1,5 @@
-const countryName = ({name}) => console.log(`Returned country is ${name}`);
-const countryCurrency = ({name, currency}) =>
+const countryName = ({ name }) => console.log(`Returned country is ${name}`);
+const countryCurrency = ({ name, currency }) =>
   console.log(`${name}'s currency is the ${currency}`);
 
 const delay = (maxMilliseconds = 5000) =>
@@ -8,7 +8,7 @@ const delay = (maxMilliseconds = 5000) =>
 const printErrorMessage = (error) =>
   console.log(`Error getting country: ${error}`);
 
-let {dq, qwdqwd, qwdqwd} = teste;
+let { dq, qwdqwd, qwdqwd } = teste;
 
 const getCountry = (onSuccess, onError) => {
   setTimeout(() => {
