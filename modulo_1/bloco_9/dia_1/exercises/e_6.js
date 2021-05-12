@@ -16,9 +16,9 @@ const handleError = (errorReason) => console.log(`Error getting temperature: ${e
 const sendMarsTemperature = (paramCalBack) => {
   setTimeout(() => {
     if (messageDelay() < 2500) {
-      paramCalBack(getMarsTemperature());
+      paramCalBack(getMarsTemperature(), null);
     } else {
-      paramCalBack(handleError('Tempo esgotado.'));
+      paramCalBack(null, handleError('Tempo esgotado.'));
     }
   }, messageDelay());
 }

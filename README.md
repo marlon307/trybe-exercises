@@ -21,4 +21,3 @@
 4.2 [JavaScript - Array e loop For](https://github.com/marlon307/trybe-exercises/tree/main/modulo_1/bloco_4/dia_2)
 
 4.3 [JavaScript - Lógica de Programação e Algoritmos](https://github.com/marlon307/trybe-exercises/tree/main/modulo_1/bloco_4/dia_3)
-
