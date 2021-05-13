@@ -18,18 +18,17 @@ const fetchJoke = () => {
     fetch(API_URL, myObject)
       .then(response => response.json()
         .then((data) => {
-          creatParagraph(data.joke);
-          resolver();
+          resolver(data.joke);
         }).catch((error) => reject(error))
       );
   })
 };
 
 const creatPiada = async () => {
-  await fetchJoke();
-  await fetchJoke();
-  await fetchJoke();
-  await fetchJoke();
+  await fetchJoke().then((text) => creatParagraph(text));
+  await fetchJoke().then((text) => creatParagraph(text));
+  await fetchJoke().then((text) => creatParagraph(text));
+  await fetchJoke().then((text) => creatParagraph(text));
 }
 
 window.onload = () => creatPiada();
