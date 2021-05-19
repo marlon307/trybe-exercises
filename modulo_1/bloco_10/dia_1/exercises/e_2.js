@@ -1,15 +1,12 @@
 const techList = (array, nameStr) => {
-  let newArray = [];
-  // console.log(array === []);
   if (array.length === 0) return 'Vazio!';
-
+  let newArray = [];
   array.forEach((element) => {
     newArray.push({
       tech: element,
       name: nameStr,
     })
   });
-
   newArray.sort((a, b) => {
     if (a.tech > b.tech) {
       return 1;
