@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import "./App.css";
+import React, { Component } from 'react';
+import './App.css';
 
 class HelloWorld extends Component {
   render() {
-    return <span className="hw">Hello World</span>;
+    return <span className='hw'>Hello World</span>;
   }
 }
 
