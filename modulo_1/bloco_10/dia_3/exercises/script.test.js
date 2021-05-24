@@ -1,6 +1,7 @@
 const { expect } = require('@jest/globals');
 let { randNumber } = require('./e_1-2-3');
-let { uppercaseLetter, firsrtUppcLetter, concatString } = require('./e_4');
+let { uppercaseLetter, firsrtUppcLetter, concatString } = require('./e_4-5');
+let { fetchFunction } = require('./e_6');
 
 describe('Teste Unitario', () => {
   test('Exercise 1', () => {
@@ -39,5 +40,19 @@ describe('Teste Unitario', () => {
   test('Exercise 5', () => {
     randNumber.mockReset();
     expect(randNumber())
+  })
+  test('Exercise 6', () => {
+    fetchFunction = jest.fn().mockResolvedValue({
+      message: 'https://images.dog.ceo/breeds/terrier-irish/n02093991_1105.jpg',
+      status: 'success'
+    })
+
+    expect(fetchFunction()).resolves.toStrictEqual({
+      message: 'https://images.dog.ceo/breeds/terrier-irish/n02093991_1105.jpg',
+      status: 'success'
+    })
+
+    fetchFunction = jest.fn().mockRejectedValue('Erro')
+    expect(fetchFunction()).rejects.toEqual('Erro');
   })
 });
