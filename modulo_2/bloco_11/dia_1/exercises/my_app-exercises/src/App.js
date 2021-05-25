@@ -1,11 +1,13 @@
 import './App.css';
 
-const Task = (value) => {
-  return <li>{value}</li>;
+const Task = (value, key) => {
+  return <li key={key}>{value}</li>;
 };
 
+const names = ['Teste1', 'Teste2', 'Teste3'];
+
 const App = () => {
-  return Task('Testet');
+  return names.map((name, key) => Task(name, key));
 };
 
 export default App;
