@@ -1,7 +1,7 @@
 import './App.css';
 
 const Task = (value) => {
-  return <li>{value}</li>;
+  return <li key={value}> {value} </li>;
 };
 
 const names = ['Teste1', 'Teste2', 'Teste3'];
