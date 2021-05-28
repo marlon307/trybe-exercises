@@ -13,30 +13,30 @@ function App() {
           image,
           moreInfo,
         }) => (
-          <li className='card' key={id}>
+          <li className='card' key={ id }>
             <a
               className='link'
-              href={moreInfo}
+              href={ moreInfo }
               target='_blank'
               rel='noreferrer'
             >
               <div className='desc'>
-                <p>{name}</p>
-                <p>{type}</p>
+                <p>{ name }</p>
+                <p>{ type }</p>
                 <span>
-                  Average weight: {value} {measurementUnit}
+                  Average weight: { value } { measurementUnit }
                 </span>
               </div>
               <img
                 className='image'
-                src={image}
-                alt={name}
+                src={ image }
+                alt={ name }
                 title='Abrir em uma nova guia a descrição completa'
               />
             </a>
           </li>
         )
-      )}
+      ) }
     </ul>
   );
 }
