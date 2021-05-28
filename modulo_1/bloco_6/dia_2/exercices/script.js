@@ -124,7 +124,7 @@ new window.JustValidate(".js-form", {
 
   focusWrongField: true,
 
-  submitHandler: function (form, values, ajax) {
+  submitHandler: function (values, ajax) {
     ajax({
       url: "https://just-validate-api.herokuapp.com/submit",
       method: "POST",
