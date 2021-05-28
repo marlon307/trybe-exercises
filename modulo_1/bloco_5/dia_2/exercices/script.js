@@ -7,7 +7,7 @@ function creatElement(element, cls) {
 
 function AddTextClass(clss, text) {
   let getElem = document.querySelector(clss);
-  return getElem.innerText = text;
+  return (getElem.innerText = text);
 }
 
 creatElement('h1', 'title');
@@ -38,7 +38,7 @@ function creatList(clssloc, qtd) {
 function Centralize(clss) {
   let getElem = document.querySelector(clss);
   console.log(getElem);
-  return getElem.style.margin = '0 auto';
+  return (getElem.style.margin = '0 auto');
 }
 
 function Remove(classPai, indexFilho) {
@@ -49,18 +49,21 @@ function Remove(classPai, indexFilho) {
 function ColorCointain(clss) {
   let getElem = document.querySelector(clss);
   console.log(getElem);
-  return getElem.style.background = 'green';
+  return (getElem.style.background = 'green');
 }
 
 //2 - Adicione a tag div com a classe main-content como filho da tag body;
 creatElement('div', 'main-content');
 
 //3 - Adicione a tag div com a classe center-content como filho da tag div criada no passo 2;
-insertChild('.main-content', 'center-content', 'div')
+insertChild('.main-content', 'center-content', 'div');
 
 //4 - Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
 insertChild('.center-content', 'paragraph', 'p');
-AddTextClass('.paragraph', 'Exercício 5.2 - JavaScript DOM como filho da tag body');
+AddTextClass(
+  '.paragraph',
+  'Exercício 5.2 - JavaScript DOM como filho da tag body'
+);
 
 //5 - Adicione a tag div com a classe left-content como filho da tag div criada no passo 2;
 insertChild('.main-content', 'left-content', 'div');
@@ -73,13 +76,12 @@ addImgClass('.left-content', 'small-image', 'https://picsum.photos/200');
 
 //8 - Adicione uma lista não ordenada com os valores de 1 a 10 por extenso como valores da lista. Essa lista deve ser filha do div criado no passo 6;
 insertChild('.right-content', 'list', 'ul');
-creatList('.list', 10)
+creatList('.list', 10);
 
 //9 - Adicione 3 tags h3 , todas sendo filhas do div criado no passo 2.
 insertChild('.main-content', 'description', 'h3');
 insertChild('.main-content', 'description', 'h3');
 insertChild('.main-content', 'description', 'h3');
-
 
 //10- Adicione a classe title na tag h1 criada;
 //OK
