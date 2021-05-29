@@ -1,0 +1,27 @@
+.imputTextBox {
+  margin: 20px 10px;
+  width: 250px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+span {
+  color: #555555;
+}
+
+input {
+  padding: 0 10px;
+  width: auto;
+  height: 5vh;
+  border-bottom: 1px solid #6d6d6d;
+  font-size: 1.2rem;
+}
+
+.erroMsg {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #ff6161;
+}
