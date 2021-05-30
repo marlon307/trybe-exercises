@@ -9,6 +9,7 @@ class App extends Component {
     this.state = this.initialState;
     this.handleChange = this.handleChange.bind(this);
     this.evenOnBlur = this.evenOnBlur.bind(this);
+    this.submitForm = this.submitForm.bind(this);
   }
 
   get initialState() {
@@ -39,6 +40,23 @@ class App extends Component {
     this.setState({
       [name]: '',
     })
+  }
+
+  submitForm() {
+    const fromCamp = ['Nome', 'Email', 'CPF', 'Endereço', 'Cidade', 'Estado', 'Residencia', 'Resumo do currículo', 'Cargo', 'Descrição do cargo'];
+    var countCheck = false;
+
+
+    Object.values(this.state).find((e) => e === '' ? countCheck = true : null);
+
+    if (countCheck === false) {
+      Object.values(this.state).map((e, i) => {
+        const containSubmit = document.querySelector('.formSubmit');
+        const creatElement = document.createElement('p');
+        creatElement.innerText = `${fromCamp[i]}: ${e}`
+        return containSubmit.appendChild(creatElement);
+      })
+    }
   }
 
   render() {
@@ -104,11 +122,10 @@ class App extends Component {
             </div>
           </fieldset>
           <div className="panelBtn">
-            <button className="submint">Enviar</button>
+            <button className="submint" onClick={ this.submitForm } type="button">Enviar</button>
             <button className="clear" onClick={ () => this.setState(this.initialState) } type="button">Limpar</button>
           </div>
           <div className="formSubmit">
-
           </div>
         </form>
       </div >
