@@ -46,7 +46,6 @@ class App extends Component {
     const fromCamp = ['Nome', 'Email', 'CPF', 'Endereço', 'Cidade', 'Estado', 'Residencia', 'Resumo do currículo', 'Cargo', 'Descrição do cargo'];
     var countCheck = false;
 
-
     Object.values(this.state).find((e) => e === '' ? countCheck = true : null);
 
     if (countCheck === false) {
