@@ -30,7 +30,7 @@
 }
 
 .formCadastro {
-  width: 80%;
+  width: 100vh;
   margin: 0 auto;
 }
 
@@ -68,6 +68,31 @@ textarea {
   gap: 3rem;
 }
 
+
+.submint {
+  background: #7ce26e;
+}
+
+.submint:hover {
+  background: #74c26a;
+}
+
+.clear:hover {
+  background: #e6e4e4;
+}
+
+.panelBtn {
+  margin: 30px 0 50px;
+}
+
+
+button {
+  padding: 15px 35px;
+  margin: 0 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
 select {
   background: transparent;
   margin: 0 10px;
@@ -75,6 +100,10 @@ select {
   font-size: 1rem;
   border-bottom: 1px solid #6d6d6d;
   color: #555555;
+}
+
+.formSubmit {
+  padding: 30px 50px;
 }
 
 @keyframes App-logo-spin {

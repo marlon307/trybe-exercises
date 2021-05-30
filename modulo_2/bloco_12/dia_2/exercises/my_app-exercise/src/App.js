@@ -6,7 +6,14 @@ class App extends Component {
 
   constructor() {
     super()
-    this.state = {
+    this.state = this.initialState;
+    this.handleChange = this.handleChange.bind(this);
+    this.evenOnBlur = this.evenOnBlur.bind(this);
+    this.submitForm = this.submitForm.bind(this);
+  }
+
+  get initialState() {
+    return {
       name: '',
       email: '',
       cpf: '',
@@ -18,9 +25,8 @@ class App extends Component {
       reumeCurr: '',
       descCargo: '',
     }
-    this.handleChange = this.handleChange.bind(this);
-    this.evenOnBlur = this.evenOnBlur.bind(this);
   }
+
   handleChange({ target }) {
     const { name, value } = target;
     const propValue = name === 'name' ? value.toUpperCase() : value;
@@ -34,6 +40,22 @@ class App extends Component {
     this.setState({
       [name]: '',
     })
+  }
+
+  submitForm() {
+    const fromCamp = ['Nome', 'Email', 'CPF', 'Endereço', 'Cidade', 'Estado', 'Residencia', 'Resumo do currículo', 'Cargo', 'Descrição do cargo'];
+    var countCheck = false;
+
+    Object.values(this.state).find((e) => e === '' ? countCheck = true : null);
+
+    if (countCheck === false) {
+      Object.values(this.state).map((e, i) => {
+        const containSubmit = document.querySelector('.formSubmit');
+        const creatElement = document.createElement('p');
+        creatElement.innerText = `${fromCamp[i]}: ${e}`
+        return containSubmit.appendChild(creatElement);
+      })
+    }
   }
 
   render() {
@@ -66,7 +88,6 @@ class App extends Component {
       'SE, Sergipe',
       'TO, Tocantins',
     ];
-    // <option value="Escolha o estado" selected disabled hidden>Escolha o estado</option>
     return (
       <div className="App" >
         <form className="formCadastro">
@@ -80,7 +101,6 @@ class App extends Component {
               <ImputText idipt="ad" typeImput="text" nameKeySt="aderess" imptValue={ this.state.aderess } eventImput={ this.handleChange } nameImp="Endereço" imptLength="200" notChar="true" />
               <ImputText idipt="ct" typeImput="text" nameKeySt="city" imptValue={ this.state.city } eventImput={ this.handleChange } sEventImput={ this.evenOnBlur } nameImp="Cidade" imptLength="28" notNum="true" msgErro="Proibido iniciar com numeros." />
             </div>
-
             <select name="uf" onChange={ this.handleChange } >
               { state.map((listState) => <option key={ listState } value={ listState }>{ listState }</option>) }
             </select>
@@ -100,8 +120,14 @@ class App extends Component {
               <textarea name="descCargo" cols="40" rows="10" maxLength="500" value={ this.state.descCargo } onChange={ this.handleChange }></textarea>
             </div>
           </fieldset>
+          <div className="panelBtn">
+            <button className="submint" onClick={ this.submitForm } type="button">Enviar</button>
+            <button className="clear" onClick={ () => this.setState(this.initialState) } type="button">Limpar</button>
+          </div>
+          <div className="formSubmit">
+          </div>
         </form>
-      </div>
+      </div >
     );
   }
 }
