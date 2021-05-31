@@ -54,7 +54,8 @@ class App extends Component {
         const creatElement = document.createElement('p');
         creatElement.innerText = `${fromCamp[i]}: ${e}`
         return containSubmit.appendChild(creatElement);
-      })
+      });
+      this.setState(this.initialState);
     }
   }
 
