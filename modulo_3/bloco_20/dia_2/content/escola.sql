@@ -15,3 +15,4 @@ USE Escola;
 SELECT Nome, Idade FROM Alunos;
 SELECT DISTINCT Nome FROM Alunos;
 SELECT DISTINCT Idade FROM Alunos;
+SELECT COUNT(Idade) FROM Alunos;

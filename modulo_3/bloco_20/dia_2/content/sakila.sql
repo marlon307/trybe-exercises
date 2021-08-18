@@ -11,4 +11,3 @@ SELECT COUNT(title) FROM film;
 SELECT COUNT(address) FROM sakila.address WHERE address2 = '';
 SELECT * FROM sakila.address LIMIT 15;
 SELECT * FROM sakila.address LIMIT 15 OFFSET 8;
-SELECT * FROM address ORDER BY district ASC, address DESC;
