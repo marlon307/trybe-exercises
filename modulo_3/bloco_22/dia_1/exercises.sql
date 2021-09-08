@@ -18,6 +18,9 @@ db.bios.find().limit(2).skip(5).pretty();
 -- mongoimport --db=listbooks --collection=books --file=books-48d15e4d8924badc2308cc4a62eb3ea4.json
 
 -- Exercício 7 : Retorne a quantidade de documentos da coleção books .
+-- use listbooks;
 db.books.count();
 -- Exercício 8 : Conte quantos livros existem com o status = "PUBLISH" .
 db.books.find({ status: "PUBLISH" }).count();
+-- Exercício 9 : Exiba os atributos title , isbn e pageCount dos 3 primeiros livros. NÃO retorne o atributo _id .
+db.books.find({}, { _id: 0, title: 1, isbn: 1, pageCount: 1 }).limit(3).pretty();
