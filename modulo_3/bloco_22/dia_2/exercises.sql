@@ -61,3 +61,7 @@ db.superheroes.find({
 db.superheroes.deleteOne({ 
   publisher: 'Sony Pictures' 
 });
+-- Exercício 19: Remova todos os documentos publicados pelo George Lucas .
+db.superheroes.deleteMany({ 
+  publisher: 'George Lucas' 
+});
