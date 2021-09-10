@@ -25,4 +25,24 @@ db.superheroes.find({ 'aspects.height': { $not: /^180/ } }).count();
 -- Exercício 13: Selecione todos os super-heróis que não sejam humanos nem sejam maiores do que 1.80m .
 db.superheroes.find({ $and: [ { race: { $not: /^Human/ } }, { 'aspects.height': { $not: { $gt: 180 } } } ] }).limit(20);
 -- Exercício 14: Selecione todos os super-heróis com 1.80m ou 2.00m de altura e que sejam publicados pela Marvel Comics .
-db.superheroes.find({ $or: [{ 'aspects.height': { $eq: 180 } } , { 'aspects.height': { $eq: 200 } }], $and: [{ publisher: 'Marvel Comics' }] }).limit(20);
+db.superheroes.find({ 
+  $or: [
+    { 'aspects.height': { $eq: 180 } } , 
+    { 'aspects.height': { $eq: 200 } }
+  ], 
+  $and: [
+    { publisher: 'Marvel Comics' }
+  ] 
+}).limit(20);
+-- Exercício 15: Selecione todos os super-heróis que pesem entre 80kg e 100kg , sejam Humanos ou Mutantes e não sejam publicados pela DC Comics .
+db.superheroes.find({ 
+  $and: [
+    { 'aspects.weight': { $gte: 80 } } , 
+    { 'aspects.weight': { $lte: 100 } },
+    { publisher: { $not: /^DC Comics/ } }
+  ], 
+  $or: [
+    { race: 'Human' },
+    { race: 'Mutants' },
+  ],
+}).limit(20);
