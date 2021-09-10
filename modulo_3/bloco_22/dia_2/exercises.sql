@@ -1,3 +1,5 @@
+-- https://app.betrybe.com/course/back-end/introducao-ao-mongodb/filter-operators/670f129e-aebb-42e5-a6ed-f577d5d6cbd6/o-que-vamos-aprender/cf091f7a-7477-4546-a782-b46a52f193cf?use_case=calendar
+
 -- Exercício 1: Inspecione um documento para que você se familiarize com a estrutura. Entenda os atributos e os níveis existentes.
 db.superheroes.count();
 -- Exercício 2: Selecione todos os super-heróis com menos de 1.80m de altura. Lembre-se de que essa informação está em centímetros.
