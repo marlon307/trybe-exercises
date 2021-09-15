@@ -81,3 +81,74 @@ db.movies.updateMany({
     }
   }
 });
+
+-- 6. Retorne todos os filmes com ratings maior do que 103 , exibindo apenas os campos title e ratings .
+
+db.movies.find({
+  ratings: {  
+    $elemMatch: { $gte: 103 }
+  },
+});
+
+-- 7. Retorne todos os filmes com ratings entre 100 e 105 , exibindo apenas os campos title e ratings .
+
+db.movies.find({
+  ratings: {  
+    $elemMatch: { $gte: 103, $lte: 105 }
+  },
+}, { 
+  _id: 0, 
+  title: 1
+});
+
+-- 8. Retorne todos os filmes com ratings entre 64 e 105 e divisíveis por 9 , exibindo apenas os campos title e ratings .
+
+db.movies.find({
+  ratings: {  
+    $elemMatch: { 
+      $gte: 64,
+      $lte: 105,
+      $mod: [9, 0]
+    },
+  },
+}, { 
+  _id: 0, 
+  title: 1
+});
+
+-- 9. Retorne os filmes da categoria adventure e com ratings maior do que 103 , exibindo apenas os campos title , ratings e category .
+
+db.movies.find({
+  ratings: {  
+    $elemMatch: { 
+      $gte: 103,
+    },
+  },
+}, { 
+  _id: 0, 
+  title: 1
+});
+
+-- 10. Retorne somente o título de todos os filmes com dois elementos no array category .
+
+db.movies.find({
+  category: {  
+    $size: 2,
+  },
+}, { 
+  _id: 0, 
+  title: 1
+});
+
+-- 11. Retorne somente o título de todos os filmes com quatro elementos no array ratings .
+
+db.movies.find({
+  ratings: {  
+    $size: 4,
+  },
+}, { 
+  _id: 0, 
+  title: 1
+});
+
+-- 12 Busque os filmes em que o módulo 5 do campo budget seja 0 e que o array category tenha tamanho 2 .
