@@ -167,11 +167,9 @@ db.movies.find({
 db.movies.createIndex({ subject: "text" });
 
 db.movies.find({
-  category: {  
     $text: { 
       $search: "sci-fi" 
     },
-  },
 }, { 
   _id: 0, 
   title: 1
