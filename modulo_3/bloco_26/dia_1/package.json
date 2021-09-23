@@ -7,7 +7,8 @@
     "start": "node index.js",
     "icms": "node icms.js",
     "readline": "node readline.js",
-    "velocidade": "node velocidade.js"
+    "velocidade": "node velocidade.js",
+    "sorteio": "node sorteio.js"
   },
   "dependencies": {
     "readline-sync": "^1.4.10"
