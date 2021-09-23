@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "icms": "node icms.js",
-    "readline": "node readline.js"
+    "readline": "node readline.js",
+    "velocidade": "node velocidade.js"
   },
   "dependencies": {
     "readline-sync": "^1.4.10"
