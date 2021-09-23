@@ -5,5 +5,4 @@ const tempo = readline.questionInt('Qual o tempo? ');
 
 const velocidade = () => distancia / tempo;
 
-
 console.log('Velocidade ' + velocidade());
