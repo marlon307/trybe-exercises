@@ -234,7 +234,7 @@ db.vendas.aggregate([
   },
   { $limit: 1 },
   {
-$lookup: { // Seleciona todos os clientes com as suas respectivas transações feitas;
+$lookup: {
       from: 'clientes',
       localField: '_id',
       foreignField: 'clienteId',
