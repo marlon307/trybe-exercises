@@ -5,8 +5,9 @@
   "license": "MIT",
   "scripts": {
     "start": "node index.js",
-    "icms": "node icms.js",
-    "readline": "node readline.js"
+    "icm": "node icm.js",
+    "velocidade": "node velocidade.js",
+    "sorteio": "node sorteio.js"
   },
   "dependencies": {
     "readline-sync": "^1.4.10"

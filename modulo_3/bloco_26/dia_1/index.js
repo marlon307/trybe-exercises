@@ -1,3 +1,22 @@
-const { icms } = require('./icms')
+const readline = require('readline-sync');
 
-console.log(icms());
+const scripts = [
+  { name: 'Calcular IMC', script: './icm.js' },
+  { name: 'Calcular velocidade média', script: './velocidade.js' },
+  { name: 'Jogo de adivinhação', script: './sorteio.js' },
+];
+
+let mensagem = scripts
+  .map((script, index) => `${index + 1} - ${script.name}`);
+
+
+mensagem.unshift('Escolha um número para executar o script correspondente');
+
+mensagem = mensagem.join('\n');
+
+const scriptNumber = readline.questionInt(mensagem) - 1;
+const script = scripts[scriptNumber];
+
+if (!script) return console.log('Número inválido. Saindo');
+
+require(script.script);
