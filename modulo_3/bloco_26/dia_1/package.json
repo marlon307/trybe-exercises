@@ -1,0 +1,14 @@
+{
+  "name": "dia_1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "icms": "node icms.js",
+    "readline": "node readline.js"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
