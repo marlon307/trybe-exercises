@@ -1,4 +1,4 @@
-const { readFile, writeFile } = require('fs');
+const { readFile, writeFile } = require('fs').promises;
 
 
 
@@ -12,20 +12,6 @@ function getPesronageId(id) {
 }
 
 
-
-// readFile('./simpsons.json', 'utf8', (err, data) => {
-//   if (err) throw new Error('Falha na execução do arquivo.');
-//   JSON.parse(data).map(({ id, name }) => console.log(`${id} - ${name}`));
-// });
-
-// function getPesronageId(id) {
-//   readFile('./simpsons.json', 'utf8', (err, data) => {
-//     if (err) throw err;
-//     const array = JSON.parse(data)[id - 1];
-//     console.log(`${array.id} - ${array.name}`);
-//   });
-// }
-
 // getPesronageId(5);
 
 function newFamily() {
@@ -35,7 +21,7 @@ function newFamily() {
 
     const newDataArray = dataArray.filter(({ id }) => id === '4' || id === '1');
 
-    writeFile('simpsonFamily.json', JSON.stringify(newDataArray), (err) => {
+    writeFile('./simpsonFamily.json', JSON.stringify(newDataArray), (err) => {
       if (err) throw new Error('Errona escrita do arquivo');
       console.log('Sucesso!');
     })
@@ -67,23 +53,12 @@ function addPeronage(name) {
 
 // addPeronage('Teste')
 
-function addPeronage(name) {
-  const getArray = require('./simpsonFamily.json');
-  let newId = 0;
-
-  getArray.forEach(({ id }) => {
-    newId = Number(id) + 1;
-  })
-
-  const newObject = {
-    id: String(newId),
-    name
-  }
-
-  console.log(newObject);
-
-  writeFile('./simpsonFamily.json', JSON.stringify([...getArray, newObject]), (err) => {
-    if (err) throw new Error('Errona escrita do arquivo');
-    console.log('Sucesso!');
-  })
+async function alterNamePeronage(name) {
+  await readFile('./simpsonFamily.json', 'utf-8')
+    .then((array) => JSON.parse(array))
+    .then((objectName) => objectName.filter((afterName) => afterName.name !== name))
+    .then((simpsomName) => simpsomName.concat([{ id: '8', name: 'Maggie Simpson' }]))
+    .then((newArray) => writeFile('./simpsonFamily.json', JSON.stringify(newArray)))
 }
+
+alterNamePeronage('Teste');
