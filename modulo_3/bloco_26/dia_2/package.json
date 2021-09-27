@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "node index.js",
-    "exercise4": "node exercise4.js"
+    "exercise4": "node exercise4.js",
+    "exercise5": "node exercise5.js"
   },
   "dependencies": {}
 }
