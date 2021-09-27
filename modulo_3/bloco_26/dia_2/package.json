@@ -6,5 +6,6 @@
   "scripts": {
     "start": "node index.js",
     "exercise4": "node exercise4.js"
-  }
+  },
+  "dependencies": {}
 }
