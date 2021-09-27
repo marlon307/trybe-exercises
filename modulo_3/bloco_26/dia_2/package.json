@@ -2,5 +2,9 @@
   "name": "dia_2",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "exercise4": "node exercise4.js"
+  }
 }
