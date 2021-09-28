@@ -5,10 +5,12 @@
   "license": "MIT",
   "devDependencies": {
     "chai": "^4.3.4",
-    "mocha": "^9.1.2"
+    "mocha": "^9.1.2",
+    "sinon": "^11.1.2"
   },
   "scripts": {
-    "exercise1": "node exercise1.js",
+    "exercise1": "node exercise1-2-3.js",
+    "exercise4": "node exercise4.js",
     "test": "mocha tests"
   }
 }
