@@ -1,8 +1,24 @@
-const fs = require('fs');
+const { writeFileSync, readFile, existsSync } = require('fs');
 
 function textwriteFile(fileName, string) {
-  fs.writeFileSync(`${__dirname}/${fileName}`, string);
-  return 'ok'
+  writeFileSync(`./${fileName}`, string);
+  return 'ok';
 }
 
-module.exports = textwriteFile
+function lerArquivo(fileName) {
+
+  if (existsSync(`./${fileName}`)) {
+    readFile(`./${fileName}`, 'utf8', (err, data) => {
+      if (err) throw err;
+      console.log(data);
+    });
+    return 'ok'
+  } else {
+    return null;
+  }
+}
+
+module.exports = {
+  textwriteFile,
+  lerArquivo
+}
