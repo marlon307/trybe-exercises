@@ -2,51 +2,29 @@ const fs = require('fs');
 const sinon = require('sinon');
 const { expect } = require('chai');
 
-const resultRequired = 'texto';
-const { textwriteFile, lerArquivo } = require('../exercise4');
+const { textwriteFile } = require('../exercise4');
 
-describe('Exercises', () => {
-  describe('Exercise 4', () => {
+describe('Executa a função textwriteFile', () => {
 
-    before(() => {
-      sinon.stub(fs, 'writeFileSync')
-        .throws(new Error('Arquivo não encontrado'));
-    });
-
-    after(() => {
-      fs.writeFileSync.restore();
-    });
-
-    describe('Resultado', () => {
-      it('Escreva ok', () => {
-        const write = textwriteFile('text.txt', resultRequired);
-        expect(write).to.be.a('string')
-      })
-
-      it('Return ok', () => {
-        const write = textwriteFile('text.txt', resultRequired);
-        expect(write).to.be.equals('ok')
-      })
-    })
+  before(() => {
+    sinon.stub(fs, 'writeFileSync');
   });
 
-  describe('Exercise 5', () => {
+  after(() => {
+    fs.writeFileSync.restore();
+  });
 
-    before(() => {
-      sinon.stub(fs, 'readFileSync')
-        .throws(new Error('Arquivo não encontrado'));
+  describe('a resposta', () => {
+    it('é uma "string"', () => {
+      const resposta = textwriteFile('arquivo.txt', '#vqv conteúdo');
+
+      expect(resposta).to.be.a('string');
     });
 
-    after(() => {
-      fs.readFileSync.restore();
+    it('é igual a "ok"', () => {
+      const resposta = textwriteFile('arquivo.txt', '#vqv conteúdo');
+
+      expect(resposta).to.be.equals('ok');
     });
-
-    describe('Resultado', () => {
-      it('deve ser igual a "null"', () => {
-        const resulRead = lerArquivo('arquivo_que_nao_existe.txt');
-
-        expect(resulRead).to.be.equal(null);
-      })
-    })
-  })
+  });
 });
