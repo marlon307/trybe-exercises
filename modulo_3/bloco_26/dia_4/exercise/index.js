@@ -69,6 +69,29 @@ app.get('/simpsons/:id', (req, res) => {
   res.status(404).json({ message: 'simpson not found' })
 })
 
+//8
+function writeFile(id, name) {
+  const read = readFile();
+  if (read.id !== id) {
+    read.push({
+      id: id.toString(),
+      nome: name.toString()
+    });
+
+    fs.writeFileSync('./simpsons.json', JSON.stringify(read))
+  } else return 409;
+}
+
+app.post('/simpsons', (req, res) => {
+  const { id, name } = req.query;
+  console.log(id, name);
+  if (writeFile(id, name) !== 409) {
+    writeFile(id, name);
+    return res.status(204).end();
+  }
+  res.status(409).json({ message: `${id} already exists` });
+})
+
 
 app.listen(3001, () => {
   console.log('url: http://localhost:3001');
