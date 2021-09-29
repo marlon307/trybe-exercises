@@ -1,4 +1,4 @@
-const { writeFileSync, readFile, existsSync } = require('fs');
+const { writeFileSync } = require('fs');
 
 function textwriteFile(fileName, string) {
   writeFileSync(`./${fileName}`, string);
