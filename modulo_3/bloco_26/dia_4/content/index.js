@@ -27,7 +27,6 @@ app.get('/recipes/:id', function (req, res) {
   const { id } = req.params;
   const recipe = recipes.find((r) => r.id === parseInt(id));
   if (!recipe) return res.status(404).json({ message: 'Recipe not found!' });
-
   res.status(200).json(recipe);
 });
 
@@ -44,20 +43,15 @@ app.put('/recipes/:id', function (req, res) {
   const recipeIndex = recipes.findIndex((r) => r.id === parseInt(id));
 
   if (recipeIndex === -1) return res.status(404).json({ message: 'Recipe not found!' });
-
   recipes[recipeIndex] = { ...recipes[recipeIndex], name, price };
-
   res.status(204).end();
 });
 
 app.delete('/recipes/:id', function (req, res) {
   const { id } = req.params;
   const recipeIndex = recipes.findIndex((r) => r.id === parseInt(id));
-
   if (recipeIndex === -1) return res.status(404).json({ message: 'Recipe not found!' });
-
   recipes.splice(recipeIndex, 1);
-
   res.status(204).end();
 });
 
