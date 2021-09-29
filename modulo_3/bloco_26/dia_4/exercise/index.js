@@ -55,8 +55,12 @@ function readFileId(id) {
 
   return 404;
 }
-// 6
+//6
+app.get('/simpsons', (req, res) => {
+  res.status(202).json(readFile())
+})
 
+//7
 app.get('/simpsons/:id', (req, res) => {
   const { id } = req.params;
   if (readFileId(id) !== 404) {
