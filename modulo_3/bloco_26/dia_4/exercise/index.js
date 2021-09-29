@@ -1,11 +1,11 @@
 const express = require('express');
-const cors = require('cors')
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const app = express();
 
-app.use(cors());
 app.use(bodyParser.json());
+app.use(cors());
 
 // 1
 app.get('/ping', (req, res) => {
@@ -22,13 +22,14 @@ app.get('/hello/:name', (req, res) => {
 
 app.post('/greetings', (req, res) => {
   const { name, age } = req.query;
-  console.log(req.query);
-  if (age > 17) {
-    res.status(201).josn({ message: name })
-  } else {
-    res.status(401).josn({ message: 'Unauthorized' })
+
+  if (Number(age) > 17) {
+    return res.status(201).json({ message: `Hello, ${name}` })
   }
+  res.status(401).json({ message: '401 - Unauthorized' })
 })
+
+//4
 
 app.listen(3001, () => {
   console.log('url: http://localhost:3001');
