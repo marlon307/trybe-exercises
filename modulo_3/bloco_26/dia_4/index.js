@@ -32,7 +32,8 @@ app.get('/recipes/:id', function (req, res) {
 });
 
 app.post('/recipes', function (req, res) {
-  const { id, name, price } = req.body;
+  //const { id, name, price } = req.body;
+  const { id, name, price } = req.query;
   recipes.push({ id, name, price });
   res.status(201).json({ message: 'Recipe created successfully!' });
 });
