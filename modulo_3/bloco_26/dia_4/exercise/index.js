@@ -31,6 +31,11 @@ app.post('/greetings', (req, res) => {
 
 //4
 
+app.put('/users/:name/:age', (req, res) => {
+  const { name, age } = req.params;
+  res.status(202).json({ message: `Seu nome é ${name} e você tem ${age} anos de idade` });
+})
+
 app.listen(3001, () => {
   console.log('url: http://localhost:3001');
 })
