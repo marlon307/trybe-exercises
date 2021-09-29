@@ -72,7 +72,10 @@ app.get('/simpsons/:id', (req, res) => {
 //8
 function writeFile(id, name) {
   const read = readFile();
-  if (read.id !== id) {
+
+  const result = read.some((object) => object.id === id)
+
+  if (!result) {
     read.push({
       id: id.toString(),
       nome: name.toString()
@@ -84,7 +87,7 @@ function writeFile(id, name) {
 
 app.post('/simpsons', (req, res) => {
   const { id, name } = req.query;
-  console.log(id, name);
+
   if (writeFile(id, name) !== 409) {
     writeFile(id, name);
     return res.status(204).end();
