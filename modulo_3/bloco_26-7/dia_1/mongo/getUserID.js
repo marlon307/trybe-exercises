@@ -1,6 +1,7 @@
 const connection = require('./connectionMongo');
 const { ObjectId } = require('mongodb');
 
+// ex 6161ad163ca9d36afcf4646e
 const getUserID = async (id) => {
   if (!ObjectId.isValid(id))
     return null

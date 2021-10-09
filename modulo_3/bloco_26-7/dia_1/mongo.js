@@ -5,6 +5,7 @@ const getID = require('./mongo/getID');
 const { validItens, postUser } = require('./mongo/postUser');
 const getAllUsers = require('./mongo/getAllUsers');
 const getUserID = require('./mongo/getUserID');
+const putUserID = require('./mongo/putUserID');
 
 const app = express();
 
@@ -38,6 +39,14 @@ app.get('/users/:id', async (req, res) => {
   const getUser = await getUserID(id);
   res.status(202).json(getUser);
 });
+
+app.put('/users/edit/:id', async (req, res) => {
+  const { id } = req.params;
+  const { firstName, lastName, email, password } = req.body;
+  const getResult = await putUserID(id, firstName, lastName, email, password);
+  res.status(202).json(getResult);
+});
+
 
 app.listen(3000, () => {
   console.log('http://localhost:3000/');
