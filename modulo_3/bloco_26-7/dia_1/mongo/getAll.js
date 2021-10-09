@@ -5,7 +5,7 @@ const getAll = async () =>
   .then((db) =>
     db.collection('authors').find().toArray())
   .then((authors) =>
-    authors.map((_id, firstName, middleName, lastName) => ({
+    authors.map(({ _id, firstName, middleName, lastName }) => ({
       id: _id,
       firstName,
       middleName,
