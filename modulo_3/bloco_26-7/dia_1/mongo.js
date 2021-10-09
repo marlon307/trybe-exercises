@@ -4,6 +4,7 @@ const getAll = require('./mongo/getAll');
 const getID = require('./mongo/getID');
 const { validItens, postUser } = require('./mongo/postUser');
 const getAllUsers = require('./mongo/getAllUsers');
+const getUserID = require('./mongo/getUserID');
 
 const app = express();
 
@@ -30,6 +31,12 @@ app.post('/user', validItens, async (req, res) => {
 app.get('/users', async (req, res) => {
   const getUsers = await getAllUsers();
   res.status(202).json(getUsers);
+});
+
+app.get('/users/:id', async (req, res) => {
+  const { id } = req.params;
+  const getUser = await getUserID(id);
+  res.status(202).json(getUser);
 });
 
 app.listen(3000, () => {
