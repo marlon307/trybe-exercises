@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "mongo": "nodemon mongo.js"
+    "mongo": "nodemon mongo.js",
+    "mysql": "nodemon mysql.js"
   },
   "devDependencies": {
     "nodemon": "^2.0.13"
