@@ -2,8 +2,8 @@ const express = require('express');
 const isValid = require('./mysql/isValid');
 const getAll = require('./mysql/getAll');
 const getID = require('./mysql/getID');
-const putAuthor = require('./mysql/putAuthor');
-
+const postAuthor = require('./mysql/postAuthor');
+const postBook = require('./mysql/postBook');
 
 const app = express();
 app.use(express.json());
@@ -26,11 +26,17 @@ app.post('/authors', async (req, res) => {
     return res.status(400).json({ message: 'Dados inválidos' });
   }
 
-  await putAuthor(firstName, middleName, lastName);
-  res.status(202).json({ message: 'Autor criado com sucesso! ' });
+  await postAuthor(firstName, middleName, lastName);
+  res.status(202).json({ message: 'Autor criado com sucesso!' });
 })
 
-app.use(express())
+app.post('/postbook', async (req, res) => {
+  const { idAuthor, title } = req.body;
+  const cathErro = await postBook(title, idAuthor);
+  if (cathErro === 400)
+    return res.status(400).json({ message: 'Author não existe' });
+  res.status(201).json({ message: 'Livro criado com sucesso!' });
+})
 
 app.listen(3000, () => {
   console.log('http://localhost:3000/');
