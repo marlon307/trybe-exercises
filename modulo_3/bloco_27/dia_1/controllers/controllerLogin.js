@@ -3,16 +3,18 @@ const jwt = require('jsonwebtoken');
 const secret = 'seusecretdetoken';
 
 const jwtconfig = {
-  expiresIn: '7d',
+  expiresIn: '1h',
   algorithm: 'HS256',
 }
 
 function controllerLogin(req, res) {
   const { user, psw } = req.body;
 
-  const token = jwt.sign({ data: user }, secret, jwtconfig);
+  const token = jwt.sign({
+    data: user
+  }, secret, jwtconfig);
+
   try {
-    console.log(user, psw);
     res.status(200).json({
       message: 'Logado com sucesso',
       token
