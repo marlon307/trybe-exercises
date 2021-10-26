@@ -1,7 +1,6 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const bodyParser = require('body-parser');
 const multer = require('multer');
 
 const PORT = process.env.PORT;
@@ -56,5 +55,5 @@ app.post('/files/upload', upload.single('file'), (req, res) =>
 app.get('/ping', controllers.ping);
 
 app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}`);
+  console.log(`App listening on http://localhost:${PORT}`);
 });
