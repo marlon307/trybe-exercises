@@ -18,8 +18,8 @@ app.use(
   })
 );
 
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }))
 
 // /* Definindo nossa pasta pública */
 // /* `app.use` com apenas um parâmetro quer dizer que
