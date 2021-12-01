@@ -388,3 +388,13 @@ Link: [FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://be-trybe.typeform.com/to/Z
 O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no readme. Isso acontece para deixar o processo de avaliação mais rápido. Então, não se assuste se isso acontecer, ok?
 
 ---
+
+![Alt Text](https://github.com/tryber/sd-011-project-lessons-learned/blob/marlon307-lessons-learned-project/img/Captura%20de%20tela%20de%202021-03-25%2014-38-46.png?raw=true)
+
+![Alt Text](https://github.com/tryber/sd-011-project-lessons-learned/blob/marlon307-lessons-learned-project/img/Captura%20de%20tela%20de%202021-03-25%2014-38-51.png?raw=true)
+
+![Alt Text](https://github.com/tryber/sd-011-project-lessons-learned/blob/marlon307-lessons-learned-project/img/Captura%20de%20tela%20de%202021-03-25%2014-38-56.png?raw=true)
+
+![Alt Text](https://github.com/tryber/sd-011-project-lessons-learned/blob/marlon307-lessons-learned-project/img/Captura%20de%20tela%20de%202021-03-25%2014-39-06.png?raw=true)
+
+![Alt Text](https://github.com/tryber/sd-011-project-lessons-learned/blob/marlon307-lessons-learned-project/img/Captura%20de%20tela%20de%202021-03-25%2014-39-08.png?raw=true)

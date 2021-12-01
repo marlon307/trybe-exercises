@@ -1,0 +1,52 @@
+* {
+  text-align: center;
+}
+
+#color-palette {
+  display: inline-flex;
+}
+
+.color {
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.black {
+  background: black;
+}
+
+.orange {
+  background: orange;
+}
+
+.pink {
+  background: pink;
+}
+
+.green {
+  background: green;
+}
+
+.panelBtn {
+  margin-top: 20px;
+}
+
+#pixel-board {
+  margin: 30px auto;
+  display: table;
+}
+
+.line {
+  display: table-row;
+}
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  background: white;
+  display: table-cell;
+}
