@@ -20,8 +20,10 @@ body {
 }
 
 .movie-list {
+  align-items: center;
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
   padding: 48px 30px;
 }
 
@@ -36,7 +38,6 @@ body {
   overflow: hidden;
   width: 300px;
 }
-
 
 .movie-card-image {
   width: 100%;
