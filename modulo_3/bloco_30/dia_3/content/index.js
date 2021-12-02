@@ -9,11 +9,10 @@ const io = require('socket.io')(http, {
   }
 });
 
-require('./sockets/ping')(io);
-
-require('./sockets/chat')(io);
-
 app.use(express.static(__dirname + '/public'));
+
+require('./sockets/ping')(io);
+require('./sockets/chat')(io);
 
 http.listen(3000, () => {
   console.log('Servidor ouvindo na porta http://localhost:3000');
