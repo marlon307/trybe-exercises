@@ -1,0 +1,57 @@
+body {
+  align-items: center;
+  display: flex;
+  gap: 4em;
+  justify-content: center;
+  padding: 4em;
+}
+
+.nameuser {
+  align-items: center;
+  border: 1px solid #ccc;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  margin-bottom: 2em;
+  width: 300px;
+}
+
+.nickname-button {
+  padding: 0.66em 2em;
+}
+
+.nickname-box {
+  height: 30px;
+  width: 200px;
+}
+
+.online-user {
+  border: 1px solid #ccc;
+  height: 70vh;
+  overflow: auto;
+  width: 300px;
+}
+
+.messages {
+  border: 1px solid #ccc;
+  height: 68vh;
+  margin-bottom: 2em;
+  overflow: auto;
+  width: 600px;
+}
+
+.box-sendmsg {
+  align-items: center;
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+
+.message-box {
+  height: 8vh;
+  width: 80%;
+}
+
+.send-message {
+  padding: 2em;
+}
