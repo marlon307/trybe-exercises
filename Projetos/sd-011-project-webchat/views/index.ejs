@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <section>
+    <div class="nameuser">
+      <input type="text" class="nickname-box" name="nickname-box" id="nickname-box" data-testid="nickname-box">
+      <button data-testid="nickname-button" class="nickname-button" id="nickname-button">Salvar</button>
+    </div>
+    <ul class="online-user" id="list-online-user">
+
+    </ul>
+  </section>
+  <section>
+    <div id="messages" class="messages">
+      <ul id="list-message">
+        <% arrayMessages.forEach(({nickname, timestamp, message}) => { %>
+        <li data-testid='message'><%= timestamp %> - <%= nickname %>: <%= message %></li>
+        <% }) %>
+      </ul>
+    </div>
+    <div class="box-sendmsg">
+      <input name="message-box " data-testid="message-box" id="message-box" data-testid="message-box" class="message-box"></textarea>
+      <button data-testid="send-button" class="send-message" id="send-message">Enviar</button>
+    </div>
+  </section>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="./js/chat.js"></script>
+</body>
+
+</html>
