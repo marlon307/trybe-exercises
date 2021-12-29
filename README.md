@@ -76,6 +76,6 @@
 
 # Projetos
 
-### Projetos feitos apos a conclusão dos blocos se encontra na pasta [Projetos](https://github.com/marlon307/trybe-exercises/tree/main/Projetos).
+### Projetos feitos apos a conclusão de cada bloco se encontra na pasta [Projetos](https://github.com/marlon307/trybe-exercises/tree/main/Projetos).
 
 Abrindo cada pasta você encontrara um readme falando sobre o que o projeto é as instruções de como fazer um igual e como inicializar em seu computador.
