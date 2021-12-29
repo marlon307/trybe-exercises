@@ -1,23 +1,69 @@
-# Modulo 1
-### Fundamentos do Desenvolvimento Web
+# Execícios
 
-#### Bloco 3 - Introdução à HTML e CSS
+<details>
+<summary>Módulo 1</summary>
 
-3.1 [HTML & CSS - Estruturas de página](https://github.com/marlon307/trybe-exercises/tree/main/modulo_1/bloco_3/dia_1)
++ Bloco 01: Unix & Bash
++ Bloco 02: Git, GitHub e Internet
++ Bloco 03: Introdução à HTML e CSS
++ Bloco 04: Introdução à JavaScript e Lógica de Programação
++ Bloco 05: JavaScript: DOM, Eventos e Web Storage
++ Bloco 06: HTML e CSS: Forms, Flexbox e Responsivo
++ Bloco 07: Introdução à JavaScript ES6 e Testes Unitários
++ Bloco 08: Higher Order Functions do JavaScript ES6
++ Bloco 09: JavaScript e Testes Assíncronos
 
+</details>
 
-3.2 [HTML & CSS - Primeiros passos em CSS Próximo](https://github.com/marlon307/trybe-exercises/tree/main/modulo_1/bloco_3/dia_2)
+</br>
 
+<details>
+<summary>Módulo 2</summary>
 
-3.3 [HTML & CSS - Seletores e posicionamento](https://github.com/marlon307/trybe-exercises/tree/main/modulo_1/bloco_3/dia_3)
++ Bloco 10: Introdução à React
++ Bloco 11: Componentes com Estado, Eventos e Formulários com React
++ Bloco 12: Ciclo de Vida de Componentes e React Router
++ Bloco 13: Metodologias Ágeis
++ Bloco 14: Testes automatizados com React Testing Library
++ Bloco 15: Gerenciamento de estado com Redux
++ Bloco 16: Projeto Jogo de Trivia
++ Bloco 17: Context API e React Hooks
++ Bloco 18: Projeto App de Receitas
 
+</details>
 
-3.4 [HTML Semântico](https://github.com/marlon307/trybe-exercises/tree/main/modulo_1/bloco_3/dia_4)
+</br>
 
-#### Bloco 4 - Introdução à JavaScript e Lógica de Programação
+<details>
+<summary>Módulo 3</summary>
 
-4.1 [JavaScript - Primeiros passos](https://github.com/marlon307/trybe-exercises/tree/main/modulo_1/bloco_4/dia_1)
++ Bloco 19: Introdução à SQL
++ Bloco 20: Funções SQL, JOINs e Normalização
++ Bloco 21: Normalização e Modelagem de Banco de Dados
++ Bloco 22: Introdução ao MongoDB
++ Bloco 23: MongoDB: Updates Simples e Complexos
++ Bloco 24: MongoDB: Aggregation Framework
++ Bloco 25: Introdução ao desenvolvimento Web com Node.js
++ Bloco 26: Node.js: Camada de Serviço e Arquitetura Rest e Restful
++ Bloco 27: Autenticação e Upload de Arquivos
++ Bloco 28: Deployment
++ Bloco 29: Arquitetura: SOLID e ORM
++ Bloco 30: Sockets
++ Bloco 31: Projeto - App de Delivery
 
-4.2 [JavaScript - Array e loop For](https://github.com/marlon307/trybe-exercises/tree/main/modulo_1/bloco_4/dia_2)
+</details>
 
-4.3 [JavaScript - Lógica de Programação e Algoritmos](https://github.com/marlon307/trybe-exercises/tree/main/modulo_1/bloco_4/dia_3)
+</br>
+
+<details>
+<summary>Módulo 4</summary>
+
++ Bloco 32: Introdução à Python
++ Bloco 33: Programação Orientada a Objetos e Padrões de Projeto
++ Bloco 34: Redes e Raspagem de Dados
++ Bloco 35: Algoritmos
++ Bloco 36: Estrutura de Dados I: Arrays, Hashmaps e Sets
++ Bloco 37: Estrutura de Dados II: Listas, Filas e Pilhas
+
+</details>
+
