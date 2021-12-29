@@ -1,4 +1,4 @@
-# Execícios
+# Exercícios
 
 ### Exercícios e conteúdos estudados durante o curso
 
